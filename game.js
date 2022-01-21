@@ -8,7 +8,7 @@ import {
   snakeIntersection,
 } from './snake.js';
 
-import { update as updateFood, draw as drawFood } from './food.js';
+import { update as updateFood, draw as drawFood, result } from './food.js';
 
 import { outsideGrid } from './grid.js';
 
@@ -39,6 +39,7 @@ window.requestAnimationFrame(main);
 function update() {
   updateSnake();
   updateFood();
+  document.getElementById('score').innerHTML = 'Score ' + result;
   checkDeath();
 }
 
